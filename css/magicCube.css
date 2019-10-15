@@ -1,0 +1,104 @@
+html{
+  background: linear-gradient(#c2c2c2 0%,#666666 80%);
+  height: 100%;
+}
+@keyframes rotate{
+  0%{
+    transform:rotateX(0deg) rotateY(0deg);
+  }
+  100%{
+    transform:rotateX(360deg) rotateY(360deg);
+  }
+}
+.wrap{
+  margin-top: 300px;
+  perspective: 1000px;
+}
+.cube{
+  margin: auto;
+  width: 250px;
+  height: 250px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotate 20s infinite linear;
+}
+.cube div{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: .9;
+}
+.out-front{
+  background-color: red;
+}
+.out-back{
+  background-color: orange;
+}
+.out-left{
+  background-color:blue;
+}
+.out-right{
+  background-color:green;
+}
+.out-top{
+  background-color:yellow;
+}
+.out-bottom{
+  background-color:white;
+}
+.cube i{
+  position: absolute;
+  width: 83px;
+  height: 83px;
+  border: 1px solid #000;
+}
+.piece-2{
+  top: 0;
+  left: 83px;
+}
+.piece-3{
+  top: 0;
+  left: 166px;
+}
+.piece-4{
+  top: 83px;
+  left: 0px;
+}
+.piece-5{
+  top: 83px;
+  left: 83px;
+}
+.piece-6{
+  top: 83px;
+  left: 166px;
+}
+.piece-7{
+  top: 166px;
+  left: 0px;
+}
+.piece-8{
+  top: 166px;
+  left: 83px;
+}
+.piece-9{
+  top: 166px;
+  left: 166px;
+}
+.out-front{
+  transform:translateZ(125px); 
+}
+.out-back{
+  transform:translateZ(-125px) rotateY(180deg); 
+}
+.out-left{
+  transform:translateX(-125px) rotateY(-90deg); 
+ }
+.out-right{
+  transform:translateX(125px) rotateY(90deg); 
+}
+.out-top{
+  transform:translateY(-125px) rotateX(90deg); 
+}
+.out-bottom{
+  transform:translateY(125px) rotateX(-90deg); 
+}
